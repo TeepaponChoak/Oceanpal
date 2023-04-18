@@ -57,7 +57,7 @@ class HomePageState extends State<HomePage> {
                     'Let get started!',
                     style: TextStyle(
                       color: Color.fromRGBO(30, 30, 30, 1),
-                      fontSize: 25,
+                      fontSize: 20,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
