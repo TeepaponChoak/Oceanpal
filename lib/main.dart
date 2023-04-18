@@ -3,22 +3,24 @@ import 'package:oceanpal/home.dart';
 
 void main() => runApp(MyApp());
 
-class MyApp extends StatelessWidget{
+class MyApp extends StatelessWidget {
   @override
-  Widget build(BuildContext context) => MaterialApp(home: HomePage(),);
+  Widget build(BuildContext context) => MaterialApp(
+        home: HomePage(),
+      );
 }
 
-class HomePage extends StatefulWidget{
+class HomePage extends StatefulWidget {
   @override
   State<HomePage> createState() => HomePageState();
 }
 
 class HomePageState extends State<HomePage> {
   @override
-  Widget build(BuildContext context){
+  Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        decoration : BoxDecoration(
+        decoration: BoxDecoration(
           color: Colors.black,
           gradient: LinearGradient(
             begin: Alignment.topCenter,
@@ -36,15 +38,16 @@ class HomePageState extends State<HomePage> {
               SizedBox(height: 130),
               Image.asset('assets/oceanpal_logo.png'),
               Text(
-                  '      “your friend in\nocean conservation”',
-                  style: TextStyle(
-                    fontSize: 24,
-                    fontFamily: 'Raleway',
-                    color: Color.fromRGBO(255, 255, 255, 1),
-                    fontWeight: FontWeight.bold,
-                  ),
+                '      “your friend in\nocean conservation”',
+                style: TextStyle(
+                  fontSize: 24,
+                  fontFamily: 'Raleway',
+                  color: Color.fromRGBO(255, 255, 255, 1),
+                  fontWeight: FontWeight.bold,
+                ),
               ),
-              SizedBox( width: 220,
+              SizedBox(
+                width: 220,
                 child: ElevatedButton(
                   onPressed: () {
                     // Add your button logic here
@@ -99,4 +102,3 @@ class BottomImage extends StatelessWidget {
     );
   }
 }
-
