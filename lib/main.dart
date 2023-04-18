@@ -33,7 +33,7 @@ class HomePageState extends State<HomePage> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
-              SizedBox(height: 200),
+              SizedBox(height: 130),
               Image.asset('assets/oceanpal_logo.png'),
               Text(
                   '      “your friend in\nocean conservation”',
