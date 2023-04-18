@@ -1,7 +1,7 @@
 # oceanpal
 
 A new Flutter project.
-Test
+Poomkiss
 ## Getting Started
 
 This project is a starting point for a Flutter application.
