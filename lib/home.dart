@@ -61,13 +61,22 @@ class Mainpage extends StatelessWidget {
                 topLeft: Radius.circular(31),
                 topRight: Radius.circular(31),
               ),
-              image: DecorationImage(
+              /*image: DecorationImage(
                 image: AssetImage('assets/turtle.jpg'),
                 fit: BoxFit.cover,
+              ),*/
+            ),
+          ),
+          Container(
+            child: Text(
+              'Category',
+              style: TextStyle(
+                color: Color.fromRGBO(0, 158, 181, 1),
+                fontFamily: 'Raleway',
+                fontWeight: FontWeight.bold,
               ),
             ),
           ),
-
           // Other widgets in the column
           // ...
         ],
