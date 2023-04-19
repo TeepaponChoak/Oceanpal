@@ -101,13 +101,109 @@ class Mainpage extends StatelessWidget {
                     ),
                   ),
                 ),
+               
               ],
+          
             ),
             
           ),
-
+        
           // Other widgets in the column
           // ...
+
+          Padding(
+  padding: EdgeInsets.only(top: 20),
+        child:  Row(
+  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+  children: [
+    DecoratedBox(
+      decoration: BoxDecoration(
+        shape: BoxShape.circle,
+        color: Colors.blue,
+      ),
+      child: SizedBox(
+        width: 73,
+        height: 73,
+        
+      
+      ),
+    ),
+    DecoratedBox(
+      decoration: BoxDecoration(
+        shape: BoxShape.circle,
+        color: Colors.blue,
+      ),
+      child: SizedBox(
+        width: 73,
+        height: 73,
+        
+      
+      ),
+    ),
+    DecoratedBox(
+      decoration: BoxDecoration(
+        shape: BoxShape.circle,
+        color: Colors.blue,
+      ),
+      child: SizedBox(
+        width: 73,
+        height: 73,
+        
+      
+      ),
+    ),
+    DecoratedBox(
+      decoration: BoxDecoration(
+        shape: BoxShape.circle,
+        color: Colors.blue,
+      ),
+      child: SizedBox(
+        width: 73,
+        height: 73,
+        
+      
+      ),
+    ),
+  ],
+
+),
+          ),
+           Padding(
+  padding: EdgeInsets.only(top: 10),
+  child: Row(
+    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+    children: [
+      Container(
+        width: 73,
+        child: Text(
+          "Lorem",
+          textAlign: TextAlign.center,
+        ),
+      ),
+      Container(
+        width: 73,
+        child: Text(
+          "Lorem",
+          textAlign: TextAlign.center,
+        ),
+      ),
+      Container(
+        width: 73,
+        child: Text(
+          "Lorem",
+          textAlign: TextAlign.center,
+        ),
+      ),
+      Container(
+        width: 73,
+        child: Text(
+          "Lorem",
+          textAlign: TextAlign.center,
+        ),
+      ),
+    ],
+  ),
+),
         ],
       ),
     );
