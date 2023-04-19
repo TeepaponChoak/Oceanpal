@@ -101,109 +101,179 @@ class Mainpage extends StatelessWidget {
                     ),
                   ),
                 ),
-               
               ],
-          
             ),
-            
           ),
-        
+
           // Other widgets in the column
           // ...
 
           Padding(
-  padding: EdgeInsets.only(top: 20),
-        child:  Row(
-  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-  children: [
-    DecoratedBox(
-      decoration: BoxDecoration(
-        shape: BoxShape.circle,
-        color: Colors.blue,
-      ),
-      child: SizedBox(
-        width: 73,
-        height: 73,
-        
-      
-      ),
-    ),
-    DecoratedBox(
-      decoration: BoxDecoration(
-        shape: BoxShape.circle,
-        color: Colors.blue,
-      ),
-      child: SizedBox(
-        width: 73,
-        height: 73,
-        
-      
-      ),
-    ),
-    DecoratedBox(
-      decoration: BoxDecoration(
-        shape: BoxShape.circle,
-        color: Colors.blue,
-      ),
-      child: SizedBox(
-        width: 73,
-        height: 73,
-        
-      
-      ),
-    ),
-    DecoratedBox(
-      decoration: BoxDecoration(
-        shape: BoxShape.circle,
-        color: Colors.blue,
-      ),
-      child: SizedBox(
-        width: 73,
-        height: 73,
-        
-      
-      ),
-    ),
-  ],
-
-),
+            padding: EdgeInsets.only(top: 20),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                DecoratedBox(
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    color: Colors.blue,
+                    image: DecorationImage(
+                      image: AssetImage('assets/QQ.jpg'),
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                  child: SizedBox(
+                    width: 71,
+                    height: 71,
+                  ),
+                ),
+                DecoratedBox(
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    color: Colors.blue,
+                    image: DecorationImage(
+                      image: AssetImage('assets/QQ.jpg'),
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                  child: SizedBox(
+                    width: 71,
+                    height: 71,
+                  ),
+                ),
+                DecoratedBox(
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    color: Colors.blue,
+                    image: DecorationImage(
+                      image: AssetImage('assets/QQ.jpg'),
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                  child: SizedBox(
+                    width: 71,
+                    height: 71,
+                  ),
+                ),
+                DecoratedBox(
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    color: Colors.blue,
+                    image: DecorationImage(
+                      image: AssetImage('assets/QQ.jpg'),
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                  child: SizedBox(
+                    width: 71,
+                    height: 71,
+                  ),
+                ),
+              ],
+            ),
           ),
-           Padding(
-  padding: EdgeInsets.only(top: 10),
-  child: Row(
-    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-    children: [
-      Container(
-        width: 73,
-        child: Text(
-          "Lorem",
-          textAlign: TextAlign.center,
-        ),
-      ),
-      Container(
-        width: 73,
-        child: Text(
-          "Lorem",
-          textAlign: TextAlign.center,
-        ),
-      ),
-      Container(
-        width: 73,
-        child: Text(
-          "Lorem",
-          textAlign: TextAlign.center,
-        ),
-      ),
-      Container(
-        width: 73,
-        child: Text(
-          "Lorem",
-          textAlign: TextAlign.center,
-        ),
-      ),
-    ],
-  ),
-),
+          Padding(
+            padding: EdgeInsets.only(top: 10),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Container(
+                  width: 71,
+                  child: Text(
+                    "Lorem",
+                    textAlign: TextAlign.center,
+                  ),
+                ),
+                Container(
+                  width: 71,
+                  child: Text(
+                    "Lorem",
+                    textAlign: TextAlign.center,
+                  ),
+                ),
+                Container(
+                  width: 71,
+                  child: Text(
+                    "Lorem",
+                    textAlign: TextAlign.center,
+                  ),
+                ),
+                Container(
+                  width: 71,
+                  child: Text(
+                    "Lorem",
+                    textAlign: TextAlign.center,
+                  ),
+                ),
+              ],
+            ),
+          ),
+          Container(
+            alignment: Alignment.centerLeft,
+            margin: EdgeInsets.only(top: 25, left: 40),
+            child: SingleChildScrollView(
+              child: Column(
+                children: <Widget>[
+                  Container(
+                    padding: EdgeInsets.only(bottom: 17),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Container(
+                          padding: EdgeInsets.only(top: 15),
+                          width: 125,
+                          height: 125,
+                          decoration: BoxDecoration(
+                            color: Colors.grey[300],
+                            borderRadius: BorderRadius.circular(31),
+                          ),
+                        ),
+                        Container(
+                          child: Column(
+                            children: <Widget>[
+                              Container(
+                                margin: EdgeInsets.only(right: 164),
+                                child: Text(
+                                  'ชื่องาน',
+                                  style: TextStyle(
+                                    fontFamily: 'Raleway',
+                                    fontWeight: FontWeight.w700,
+                                    fontSize: 20,
+                                    color: Color.fromRGBO(7, 89, 133, 1),
+                                  ),
+                                ),
+                              ),
+                              Container(
+                                margin: EdgeInsets.only(right: 47),
+                                child: Text(
+                                  'คำอธิบายงานคำอธิบายงานคำอธ\nคำอธิบายงานคำอธิบายงานคำอธ\nคำอธิบายงานคำอธิบายงานคำอธ',
+                                  style: TextStyle(
+                                    fontFamily: 'Raleway',
+                                    fontSize: 14,
+                                  ),
+                                ),
+                              ),
+                              Container(
+                                margin: EdgeInsets.only(right: 130),
+                                child: Text(
+                                  'Location + จำนวนคน',
+                                  style: TextStyle(
+                                    fontFamily: 'Raleway',
+                                    fontSize: 11,
+                                    fontWeight: FontWeight.w600,
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
         ],
       ),
     );
