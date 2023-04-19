@@ -1,9 +1,29 @@
 import 'package:flutter/material.dart';
 import 'main.dart';
+import 'package:convex_bottom_bar/convex_bottom_bar.dart';
 
 class Mainpage extends StatelessWidget {
+  
   @override
   Widget build(BuildContext context) {
+    return
+   MaterialApp(
+    home: MyMainSite()
+   );
+  }
+}
+class MyMainSite extends StatefulWidget {
+  const MyMainSite({super.key});
+
+  @override
+  State<MyMainSite> createState() => pp();
+}
+
+class pp extends State<MyMainSite> {
+  @override
+  Widget build(BuildContext context) {
+     final Size screenSize = MediaQuery.of(context).size;
+    final double marginSize = screenSize.width * 0.2; // 
     return Scaffold(
       backgroundColor: Colors.white,
       body: Column(
@@ -204,78 +224,103 @@ class Mainpage extends StatelessWidget {
                     "Lorem",
                     textAlign: TextAlign.center,
                   ),
+                  
                 ),
+                
               ],
+              
             ),
-          ),
-          Container(
-            alignment: Alignment.centerLeft,
-            margin: EdgeInsets.only(top: 25, left: 40),
-            child: SingleChildScrollView(
-              child: Column(
-                children: <Widget>[
-                  Container(
-                    padding: EdgeInsets.only(bottom: 17),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Container(
-                          padding: EdgeInsets.only(top: 15),
-                          width: 125,
-                          height: 125,
-                          decoration: BoxDecoration(
-                            color: Colors.grey[300],
-                            borderRadius: BorderRadius.circular(31),
-                          ),
-                        ),
-                        Container(
-                          child: Column(
-                            children: <Widget>[
-                              Container(
-                                margin: EdgeInsets.only(right: 164),
-                                child: Text(
-                                  'ชื่องาน',
-                                  style: TextStyle(
-                                    fontFamily: 'NotoSans',
-                                    fontWeight: FontWeight.w700,
-                                    fontSize: 20,
-                                    color: Color.fromRGBO(7, 89, 133, 1),
-                                  ),
-                                ),
-                              ),
-                              Container(
-                                margin: EdgeInsets.only(right: 50),
-                                child: Text(
-                                  'คำอธิบายงานคำอธิบายงานคำอธ\nคำอธิบายงานคำอธิบายงานคำอธ\nคำอธิบายงานคำอธิบายงานคำอธ',
-                                  style: TextStyle(
-                                    fontFamily: 'NotoSans',
-                                    fontSize: 14,
-                                  ),
-                                ),
-                              ),
-                              Container(
-                                margin: EdgeInsets.only(right: 130),
-                                child: Text(
-                                  'Location + จำนวนคน',
-                                  style: TextStyle(
-                                    fontFamily: 'NotoSans',
-                                    fontSize: 11,
-                                    fontWeight: FontWeight.w400,
-                                  ),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ],
-              ),
-            ),
-          ),
+           
+          ), 
+         Expanded(
+  child: SingleChildScrollView(
+    child: Column(
+
+      children: <Widget>[
+        SizedBox(
+  height: MediaQuery.of(context).size.height * 0.05, ),
+        box(marginSize),
+        box(marginSize),
+        box(marginSize),
+      ],
+      //
+    ),
+    
+  ),
+),
+//create task bar here!
+
         ],
       ),
     );
+    
   }
+  Widget box (x) => Container(
+  alignment: Alignment.centerLeft,
+  margin: EdgeInsets.only(top: 2, left: 40),
+  child: SingleChildScrollView(
+    child: Column(
+      children: <Widget>[
+        Container(
+          padding: EdgeInsets.only(bottom: 17),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Container(
+                padding: EdgeInsets.only(top: 15),
+                width: 125,
+                height: 125,
+                decoration: BoxDecoration(
+                  color: Colors.grey[300],
+                  borderRadius: BorderRadius.circular(31),
+                ),
+              ),
+              Container(
+                child: Column(
+                  children: <Widget>[
+                    Container(
+                      margin: EdgeInsets.symmetric(horizontal: x),
+                      child: Text(
+                        'ชื่องาน', 
+                        style: TextStyle(
+                          fontFamily: 'NotoSans',
+                          fontWeight: FontWeight.w700,
+                          fontSize: 20,
+                          color: Color.fromRGBO(7, 89, 133, 1),
+                        ),
+                      ),
+                    ),
+                    Container(
+                      margin: EdgeInsets.only(right: 10),
+                      child: Text(
+                        'คำอธิบายงานคำอธิบายงานคำอธ\nคำอธิบายงานคำอธิบายงานคำอธ\nคำอธิบายงานคำอธิบายงานคำอธ',
+                        style: TextStyle(
+                          fontFamily: 'NotoSans',
+                          fontSize: 14,
+                        ),
+                      ),
+                    ),
+                    Container(
+                      margin: EdgeInsets.only(right: 10),
+                      child: Text(
+                        'Location + จำนวนคน',
+                        style: TextStyle(
+                          fontFamily: 'NotoSans',
+                          fontSize: 11,
+                          fontWeight: FontWeight.w400,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
+        ),
+      ],
+    ),
+  ),
+);
+
 }
+  
