@@ -49,22 +49,26 @@ class Mainpage extends StatelessWidget {
           ),
 
           // Rectangle with rounded bottom corners
-          Container(
-            margin: EdgeInsets.only(top: 25),
-            width: 344,
-            height: 183,
-            decoration: BoxDecoration(
-              color: Colors.grey[300],
-              borderRadius: BorderRadius.only(
-                bottomLeft: Radius.circular(31),
-                bottomRight: Radius.circular(31),
-                topLeft: Radius.circular(31),
-                topRight: Radius.circular(31),
+          GestureDetector(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => HomePage()),
+              );
+              // Define the action to be taken when the image is pressed
+            },
+            child: Container(
+              margin: EdgeInsets.only(top: 25),
+              width: 344,
+              height: 183,
+              decoration: BoxDecoration(
+                color: Colors.grey[300],
+                borderRadius: BorderRadius.circular(31),
+                /*image: DecorationImage(
+                  image: AssetImage('assets/turtle.jpg'),
+                  fit: BoxFit.cover,
+                ),*/
               ),
-              /*image: DecorationImage(
-                image: AssetImage('assets/turtle.jpg'),
-                fit: BoxFit.cover,
-              ),*/
             ),
           ),
           Container(
