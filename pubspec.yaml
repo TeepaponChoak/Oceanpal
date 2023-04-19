@@ -62,6 +62,11 @@ flutter:
   assets:
     - assets/oceanpal_logo.png
     - assets/sea.png
+    - assets/noti.png
+    - assets/star.png
+    - assets/profile.png
+    - assets/home.png
+    - assets/menu.png
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
