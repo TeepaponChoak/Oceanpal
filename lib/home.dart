@@ -68,15 +68,39 @@ class Mainpage extends StatelessWidget {
             ),
           ),
           Container(
-            child: Text(
-              'Category',
-              style: TextStyle(
-                color: Color.fromRGBO(0, 158, 181, 1),
-                fontFamily: 'Raleway',
-                fontWeight: FontWeight.bold,
-              ),
+            margin: EdgeInsets.only(top: 25, left: 40),
+            child: Row(
+              children: [
+                Expanded(
+                  child: Text(
+                    'Category',
+                    style: TextStyle(
+                      color: Color.fromRGBO(0, 158, 181, 1),
+                      fontSize: 20,
+                      fontFamily: 'Raleway',
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+                Expanded(
+                  child: Container(
+                    margin: EdgeInsets.only(top: 8, right: 40),
+                    alignment: Alignment.centerRight,
+                    child: Text(
+                      'See more',
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 12,
+                        fontFamily: 'Raleway',
+                        fontWeight: FontWeight.w600,
+                      ),
+                    ),
+                  ),
+                ),
+              ],
             ),
           ),
+
           // Other widgets in the column
           // ...
         ],
