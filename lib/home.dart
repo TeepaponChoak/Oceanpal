@@ -236,7 +236,7 @@ class Mainpage extends StatelessWidget {
                                 child: Text(
                                   'ชื่องาน',
                                   style: TextStyle(
-                                    fontFamily: 'Raleway',
+                                    fontFamily: 'NotoSans',
                                     fontWeight: FontWeight.w700,
                                     fontSize: 20,
                                     color: Color.fromRGBO(7, 89, 133, 1),
@@ -244,11 +244,11 @@ class Mainpage extends StatelessWidget {
                                 ),
                               ),
                               Container(
-                                margin: EdgeInsets.only(right: 47),
+                                margin: EdgeInsets.only(right: 50),
                                 child: Text(
                                   'คำอธิบายงานคำอธิบายงานคำอธ\nคำอธิบายงานคำอธิบายงานคำอธ\nคำอธิบายงานคำอธิบายงานคำอธ',
                                   style: TextStyle(
-                                    fontFamily: 'Raleway',
+                                    fontFamily: 'NotoSans',
                                     fontSize: 14,
                                   ),
                                 ),
@@ -258,9 +258,9 @@ class Mainpage extends StatelessWidget {
                                 child: Text(
                                   'Location + จำนวนคน',
                                   style: TextStyle(
-                                    fontFamily: 'Raleway',
+                                    fontFamily: 'NotoSans',
                                     fontSize: 11,
-                                    fontWeight: FontWeight.w600,
+                                    fontWeight: FontWeight.w400,
                                   ),
                                 ),
                               ),

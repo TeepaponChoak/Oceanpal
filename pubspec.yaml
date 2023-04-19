@@ -86,10 +86,18 @@ flutter:
     - family: Raleway
       fonts:
         - asset: fonts/Raleway-VariableFont_wght.ttf
+          weight: 400
         - asset: fonts/Raleway-VariableFont_wght_Bold.ttf
           weight: 700
         - asset: fonts/Raleway-VariableFont_wght_SemiBold.ttf
           weight: 600
+
+    - family: NotoSans
+      fonts:
+        - asset: fonts/NotoSansThai-Regular.ttf
+          weight: 400
+        - asset: fonts/NotoSansThai-Bold.ttf
+          weight: 700
   #       - asset: fonts/Schyler-Italic.ttf
   #         style: italic
   #   - family: Trajan Pro
