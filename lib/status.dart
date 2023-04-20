@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:oceanpal/main.dart';
 import 'home.dart';
+import 'package:google_maps_flutter/google_maps_flutter.dart';
+
 
 class StatusPage extends StatefulWidget {
   @override
@@ -188,6 +190,7 @@ class Status extends State<StatusPage> {
                 Container(
                   margin: EdgeInsets.only(right: 20, left: 20),
                   child: Row(
+
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: <Widget>[
                       Container(
@@ -280,4 +283,5 @@ class Status extends State<StatusPage> {
       ),
     );
   }
+  
 }
