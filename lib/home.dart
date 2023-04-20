@@ -1,17 +1,15 @@
 import 'package:flutter/material.dart';
 import 'main.dart';
+import 'status.dart';
 import 'package:convex_bottom_bar/convex_bottom_bar.dart';
 
 class Mainpage extends StatelessWidget {
-  
   @override
   Widget build(BuildContext context) {
-    return
-   MaterialApp(
-    home: MyMainSite()
-   );
+    return MaterialApp(home: MyMainSite());
   }
 }
+
 class MyMainSite extends StatefulWidget {
   const MyMainSite({super.key});
 
@@ -22,8 +20,8 @@ class MyMainSite extends StatefulWidget {
 class pp extends State<MyMainSite> {
   @override
   Widget build(BuildContext context) {
-     final Size screenSize = MediaQuery.of(context).size;
-    final double marginSize = screenSize.width * 0.2; // 
+    final Size screenSize = MediaQuery.of(context).size;
+    final double marginSize = screenSize.width * 0.2; //
     return Scaffold(
       backgroundColor: Colors.white,
       body: Column(
@@ -73,7 +71,7 @@ class pp extends State<MyMainSite> {
             onTap: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => HomePage()),
+                MaterialPageRoute(builder: (context) => StatusPage()),
               );
               // Define the action to be taken when the image is pressed
             },
@@ -224,91 +222,93 @@ class pp extends State<MyMainSite> {
                     "Lorem",
                     textAlign: TextAlign.center,
                   ),
-                  
                 ),
-                
               ],
-              
             ),
-           
-          ), 
-         Expanded(
-  child: SingleChildScrollView(
-    child: Column(
-
-      children: <Widget>[
-        SizedBox(
-  height: MediaQuery.of(context).size.height * 0.05, ),
-        box(marginSize),
-        box(marginSize),
-        box(marginSize),
-      ],
-      //
-    ),
-    
-  ),
-),
-//create task bar here!
-
+          ),
+          Expanded(
+            child: SingleChildScrollView(
+              child: Column(
+                children: <Widget>[
+                  SizedBox(
+                    height: MediaQuery.of(context).size.height * 0.05,
+                  ),
+                  box(marginSize),
+                  box(marginSize),
+                  box(marginSize),
+                  box(marginSize),
+                  box(marginSize),
+                ],
+                //
+              ),
+            ),
+          ),
+          BottomBox(),
+          //create task bar here!
         ],
       ),
     );
-    
   }
-  Widget box (x) => Container(
-  alignment: Alignment.centerLeft,
-  margin: EdgeInsets.only(top: 2, left: 40),
-  child: SingleChildScrollView(
-    child: Column(
-      children: <Widget>[
-        Container(
-          padding: EdgeInsets.only(bottom: 17),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
+
+  Widget box(x) => Container(
+        alignment: Alignment.centerLeft,
+        margin: EdgeInsets.only(top: 2, left: 40),
+        child: SingleChildScrollView(
+          child: Column(
+            children: <Widget>[
               Container(
-                padding: EdgeInsets.only(top: 15),
-                width: 125,
-                height: 125,
-                decoration: BoxDecoration(
-                  color: Colors.grey[300],
-                  borderRadius: BorderRadius.circular(31),
-                ),
-              ),
-              Container(
-                child: Column(
-                  children: <Widget>[
+                padding: EdgeInsets.only(bottom: 17),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
                     Container(
-                      margin: EdgeInsets.symmetric(horizontal: x),
-                      child: Text(
-                        'ชื่องาน', 
-                        style: TextStyle(
-                          fontFamily: 'NotoSans',
-                          fontWeight: FontWeight.w700,
-                          fontSize: 20,
-                          color: Color.fromRGBO(7, 89, 133, 1),
-                        ),
+                      padding: EdgeInsets.only(top: 15),
+                      width: 125,
+                      height: 125,
+                      decoration: BoxDecoration(
+                        color: Colors.grey[300],
+                        borderRadius: BorderRadius.circular(31),
                       ),
                     ),
                     Container(
-                      margin: EdgeInsets.only(right: 10),
-                      child: Text(
-                        'คำอธิบายงานคำอธิบายงานคำอธ\nคำอธิบายงานคำอธิบายงานคำอธ\nคำอธิบายงานคำอธิบายงานคำอธ',
-                        style: TextStyle(
-                          fontFamily: 'NotoSans',
-                          fontSize: 14,
-                        ),
-                      ),
-                    ),
-                    Container(
-                      margin: EdgeInsets.only(right: 10),
-                      child: Text(
-                        'Location + จำนวนคน',
-                        style: TextStyle(
-                          fontFamily: 'NotoSans',
-                          fontSize: 11,
-                          fontWeight: FontWeight.w400,
-                        ),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: <Widget>[
+                          Container(
+                            margin: EdgeInsets.symmetric(horizontal: x),
+                            child: Text(
+                              'ชื่องาน',
+                              style: TextStyle(
+                                fontFamily: 'NotoSans',
+                                fontWeight: FontWeight.w700,
+                                fontSize: 20,
+                                color: Color.fromRGBO(7, 89, 133, 1),
+                              ),
+                              textAlign: TextAlign.center,
+                            ),
+                          ),
+                          Container(
+                            margin: EdgeInsets.only(left: 30),
+                            child: Text(
+                              'คำอธิบายงานคำอธิบายงานคำอธ\nคำอธิบายงานคำอธิบายงานคำอธ\nคำอธิบายงานคำอธิบายงานคำอธ',
+                              style: TextStyle(
+                                fontFamily: 'NotoSans',
+                                fontSize: 14,
+                              ),
+                            ),
+                          ),
+                          Container(
+                            margin: EdgeInsets.only(left: 30),
+                            child: Text(
+                              'Location + จำนวนคน',
+                              style: TextStyle(
+                                fontFamily: 'NotoSans',
+                                fontSize: 11,
+                                fontWeight: FontWeight.w400,
+                              ),
+                            ),
+                          ),
+                        ],
                       ),
                     ),
                   ],
@@ -317,10 +317,72 @@ class pp extends State<MyMainSite> {
             ],
           ),
         ),
-      ],
-    ),
-  ),
-);
-
+      );
 }
-  
+
+class BottomBox extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    double screenWidth = MediaQuery.of(context).size.width;
+    return Stack(
+      children: <Widget>[
+        Container(
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: <Widget>[
+              Positioned.fill(
+                child: Container(
+                  width: screenWidth,
+                  height: 81,
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.grey.withOpacity(0.5),
+                        spreadRadius: 6,
+                        blurRadius: 10,
+                        offset: Offset(0, 3),
+                      ),
+                    ],
+                  ),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      Flexible(
+                        child: Container(
+                          padding: EdgeInsets.only(bottom: 0, right: 54),
+                          child: Image.asset(
+                            'assets/home.png',
+                            height: 30,
+                          ),
+                        ),
+                      ),
+                      Flexible(
+                        child: Container(
+                          padding: EdgeInsets.only(bottom: 7, right: 54),
+                          child: Image.asset(
+                            'assets/star.png',
+                            height: 29,
+                          ),
+                        ),
+                      ),
+                      Flexible(
+                        child: Container(
+                          padding: EdgeInsets.only(bottom: 7),
+                          child: Image.asset(
+                            'assets/profile.png',
+                            height: 28,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
+      ],
+    );
+  }
+}

@@ -43,7 +43,7 @@ class HomePageState extends State<HomePage> {
                   fontSize: 24,
                   fontFamily: 'Raleway',
                   color: Color.fromRGBO(255, 255, 255, 1),
-                  fontWeight: FontWeight.bold,
+                  fontWeight: FontWeight.w600,
                 ),
               ),
               SizedBox(
