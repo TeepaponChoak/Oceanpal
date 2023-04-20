@@ -267,10 +267,15 @@ class Status extends State<StatusPage> {
               ],
             ),
           ),
-          SizedBox(
+          /*SizedBox(
             height: 26,
+          ),*/
+          Expanded(
+            child: Align(
+              alignment: Alignment.bottomCenter,
+              child: BottomBox(),
+            ),
           ),
-          BottomBox(),
         ],
       ),
     );

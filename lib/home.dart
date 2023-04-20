@@ -332,63 +332,68 @@ class BottomBox extends StatelessWidget {
     double screenWidth = MediaQuery.of(context).size.width;
     return Stack(
       children: <Widget>[
-        Container(
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: <Widget>[
-              Positioned.fill(
-                left: 0,
-                right: 0,
-                bottom: 0,
-                child: Container(
-                  width: screenWidth,
-                  height: 81,
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.grey.withOpacity(0.5),
-                        spreadRadius: 6,
-                        blurRadius: 10,
-                        offset: Offset(0, 3),
+        Expanded(
+          child: Align(
+            alignment: Alignment.bottomCenter,
+            child: Container(
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: <Widget>[
+                  Positioned.fill(
+                    left: 0,
+                    right: 0,
+                    bottom: 0,
+                    child: Container(
+                      width: screenWidth,
+                      height: 81,
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.grey.withOpacity(0.5),
+                            spreadRadius: 6,
+                            blurRadius: 10,
+                            offset: Offset(0, 3),
+                          ),
+                        ],
                       ),
-                    ],
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: <Widget>[
+                          Flexible(
+                            child: Container(
+                              padding: EdgeInsets.only(bottom: 0, right: 54),
+                              child: Image.asset(
+                                'assets/home.png',
+                                height: 30,
+                              ),
+                            ),
+                          ),
+                          Flexible(
+                            child: Container(
+                              padding: EdgeInsets.only(bottom: 7, right: 54),
+                              child: Image.asset(
+                                'assets/star.png',
+                                height: 29,
+                              ),
+                            ),
+                          ),
+                          Flexible(
+                            child: Container(
+                              padding: EdgeInsets.only(bottom: 7),
+                              child: Image.asset(
+                                'assets/profile.png',
+                                height: 28,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
                   ),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: <Widget>[
-                      Flexible(
-                        child: Container(
-                          padding: EdgeInsets.only(bottom: 0, right: 54),
-                          child: Image.asset(
-                            'assets/home.png',
-                            height: 30,
-                          ),
-                        ),
-                      ),
-                      Flexible(
-                        child: Container(
-                          padding: EdgeInsets.only(bottom: 7, right: 54),
-                          child: Image.asset(
-                            'assets/star.png',
-                            height: 29,
-                          ),
-                        ),
-                      ),
-                      Flexible(
-                        child: Container(
-                          padding: EdgeInsets.only(bottom: 7),
-                          child: Image.asset(
-                            'assets/profile.png',
-                            height: 28,
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
+                ],
               ),
-            ],
+            ),
           ),
         ),
       ],
