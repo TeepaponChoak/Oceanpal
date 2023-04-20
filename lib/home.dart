@@ -32,33 +32,39 @@ class pp extends State<MyMainSite> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
-                Container(
-                  width: 29,
-                  height: 29,
-                  margin: EdgeInsets.only(
-                    top: 40,
-                    left: 30,
-                  ),
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(8),
-                    image: DecorationImage(
-                      image: AssetImage('assets/menu.png'),
-                      fit: BoxFit.cover,
+                GestureDetector(
+                  onTap: () {},
+                  child: Container(
+                    width: 29,
+                    height: 29,
+                    margin: EdgeInsets.only(
+                      top: 40,
+                      left: 30,
+                    ),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(8),
+                      image: DecorationImage(
+                        image: AssetImage('assets/menu.png'),
+                        fit: BoxFit.cover,
+                      ),
                     ),
                   ),
                 ),
-                Container(
-                  width: 29,
-                  height: 29,
-                  margin: EdgeInsets.only(
-                    top: 40,
-                    right: 30,
-                  ),
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(8),
-                    image: DecorationImage(
-                      image: AssetImage('assets/noti.png'),
-                      fit: BoxFit.cover,
+                GestureDetector(
+                  onTap: () {},
+                  child: Container(
+                    width: 29,
+                    height: 29,
+                    margin: EdgeInsets.only(
+                      top: 40,
+                      right: 30,
+                    ),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(8),
+                      image: DecorationImage(
+                        image: AssetImage('assets/noti.png'),
+                        fit: BoxFit.cover,
+                      ),
                     ),
                   ),
                 ),
@@ -252,7 +258,7 @@ class pp extends State<MyMainSite> {
 
   Widget box(x) => Container(
         alignment: Alignment.centerLeft,
-        margin: EdgeInsets.only(top: 2, left: 40),
+        margin: EdgeInsets.only(top: 2, left: 20),
         child: SingleChildScrollView(
           child: Column(
             children: <Widget>[
@@ -275,7 +281,7 @@ class pp extends State<MyMainSite> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: <Widget>[
                           Container(
-                            margin: EdgeInsets.symmetric(horizontal: x),
+                            margin: EdgeInsets.only(left: 0),
                             child: Text(
                               'ชื่องาน',
                               style: TextStyle(
@@ -288,7 +294,7 @@ class pp extends State<MyMainSite> {
                             ),
                           ),
                           Container(
-                            margin: EdgeInsets.only(left: 30),
+                            margin: EdgeInsets.only(right: 10),
                             child: Text(
                               'คำอธิบายงานคำอธิบายงานคำอธ\nคำอธิบายงานคำอธิบายงานคำอธ\nคำอธิบายงานคำอธิบายงานคำอธ',
                               style: TextStyle(
@@ -298,7 +304,7 @@ class pp extends State<MyMainSite> {
                             ),
                           ),
                           Container(
-                            margin: EdgeInsets.only(left: 30),
+                            margin: EdgeInsets.only(left: 0),
                             child: Text(
                               'Location + จำนวนคน',
                               style: TextStyle(
@@ -331,6 +337,9 @@ class BottomBox extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: <Widget>[
               Positioned.fill(
+                left: 0,
+                right: 0,
+                bottom: 0,
                 child: Container(
                   width: screenWidth,
                   height: 81,
