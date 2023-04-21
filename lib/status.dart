@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:oceanpal/main.dart';
 import 'home.dart';
 
-
 class StatusPage extends StatefulWidget {
   @override
   State<StatusPage> createState() => Status();
@@ -105,6 +104,10 @@ class Status extends State<StatusPage> {
                   decoration: BoxDecoration(
                     color: Colors.grey[300],
                     borderRadius: BorderRadius.circular(31),
+                    image: DecorationImage(
+                      image: AssetImage('assets/map.jpg'),
+                      fit: BoxFit.cover,
+                    ),
                   ),
                 ),
                 Container(
@@ -189,7 +192,6 @@ class Status extends State<StatusPage> {
                 Container(
                   margin: EdgeInsets.only(right: 20, left: 20),
                   child: Row(
-
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: <Widget>[
                       Container(
@@ -282,5 +284,4 @@ class Status extends State<StatusPage> {
       ),
     );
   }
-  
 }
