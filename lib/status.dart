@@ -113,7 +113,7 @@ class Status extends State<StatusPage> {
                 Container(
                   margin: EdgeInsets.all(20),
                   child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
                       Container(
                         width: 165,
@@ -149,6 +149,7 @@ class Status extends State<StatusPage> {
                         ),
                       ),
                       Container(
+                        margin: EdgeInsets.only(left: 20),
                         width: 165,
                         height: 105,
                         decoration: BoxDecoration(
@@ -192,7 +193,7 @@ class Status extends State<StatusPage> {
                 Container(
                   margin: EdgeInsets.only(right: 20, left: 20),
                   child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
                       Container(
                         width: 165,
@@ -228,6 +229,7 @@ class Status extends State<StatusPage> {
                         ),
                       ),
                       Container(
+                        margin: EdgeInsets.only(left: 20),
                         width: 165,
                         height: 105,
                         decoration: BoxDecoration(

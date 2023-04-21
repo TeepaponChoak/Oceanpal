@@ -265,7 +265,7 @@ class pp extends State<MyMainSite> {
               Container(
                 padding: EdgeInsets.only(bottom: 17),
                 child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Container(
                       padding: EdgeInsets.only(top: 15),
@@ -277,6 +277,7 @@ class pp extends State<MyMainSite> {
                       ),
                     ),
                     Container(
+                      margin: EdgeInsets.only(left: 50),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: <Widget>[
