@@ -33,7 +33,12 @@ class pp extends State<MyMainSite> {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
                 GestureDetector(
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => HomePage()),
+                    );
+                  },
                   child: Container(
                     width: 29,
                     height: 29,
@@ -83,8 +88,10 @@ class pp extends State<MyMainSite> {
             },
             child: Container(
               margin: EdgeInsets.only(top: 25),
-              width: 344,
-              height: 183,
+              //width: 350,
+              //height: 185,
+              width: MediaQuery.of(context).size.width * 0.8,
+              height: MediaQuery.of(context).size.height * 0.225,
               decoration: BoxDecoration(
                 color: Colors.grey[300],
                 borderRadius: BorderRadius.circular(31),

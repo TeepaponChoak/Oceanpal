@@ -99,8 +99,10 @@ class Status extends State<StatusPage> {
               children: <Widget>[
                 Container(
                   margin: EdgeInsets.only(top: 20),
-                  width: 350,
-                  height: 300,
+                  //width: 350,
+                  //height: 300,
+                  width: MediaQuery.of(context).size.width * 0.8,
+                  height: MediaQuery.of(context).size.height * 0.35,
                   decoration: BoxDecoration(
                     color: Colors.grey[300],
                     borderRadius: BorderRadius.circular(31),
