@@ -93,6 +93,36 @@ class Status extends State<StatusPage> {
                   ),
                 ),
               ),
+              Row(
+                children: <Widget>[
+                  Container(
+                    margin: EdgeInsets.only(top: 2),
+                    alignment: Alignment.centerLeft,
+                    child: Text(
+                      '21 Days',
+                      style: TextStyle(
+                        fontFamily: 'Raleway',
+                        fontSize: 32,
+                        fontWeight: FontWeight.w700,
+                        color: Color.fromRGBO(202, 117, 106, 1),
+                      ),
+                    ),
+                  ),
+                  Container(
+                    margin: EdgeInsets.only(left: 10, top: 2),
+                    alignment: Alignment.centerLeft,
+                    child: Text(
+                      'until eggs hatch',
+                      style: TextStyle(
+                        fontFamily: 'Raleway',
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                        color: Color.fromRGBO(0, 158, 181, 1),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
             ]),
           ),
           Container(
@@ -111,7 +141,7 @@ class Status extends State<StatusPage> {
                     //width: 350,
                     //height: 300,
                     width: MediaQuery.of(context).size.width * 0.8,
-                    height: MediaQuery.of(context).size.height * 0.35,
+                    height: MediaQuery.of(context).size.height * 0.28,
                     decoration: BoxDecoration(
                       color: Colors.grey[300],
                       borderRadius: BorderRadius.circular(31),

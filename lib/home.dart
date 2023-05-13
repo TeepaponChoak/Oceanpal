@@ -94,6 +94,10 @@ class pp extends State<MyMainSite> {
               height: MediaQuery.of(context).size.height * 0.225,
               decoration: BoxDecoration(
                 color: Colors.grey[300],
+                image: DecorationImage(
+                  image: AssetImage('assets/calen.png'),
+                  fit: BoxFit.cover,
+                ),
                 borderRadius: BorderRadius.circular(31),
                 /*image: DecorationImage(
                   image: AssetImage('assets/turtle.jpg'),
@@ -147,9 +151,9 @@ class pp extends State<MyMainSite> {
                 DecoratedBox(
                   decoration: BoxDecoration(
                     shape: BoxShape.circle,
-                    color: Colors.blue,
+                    color: Colors.white,
                     image: DecorationImage(
-                      image: AssetImage('assets/QQ.jpg'),
+                      image: AssetImage('assets/marine.png'),
                       fit: BoxFit.cover,
                     ),
                   ),
@@ -163,7 +167,7 @@ class pp extends State<MyMainSite> {
                     shape: BoxShape.circle,
                     color: Colors.blue,
                     image: DecorationImage(
-                      image: AssetImage('assets/QQ.jpg'),
+                      image: AssetImage('assets/forest.png'),
                       fit: BoxFit.cover,
                     ),
                   ),
@@ -177,7 +181,7 @@ class pp extends State<MyMainSite> {
                     shape: BoxShape.circle,
                     color: Colors.blue,
                     image: DecorationImage(
-                      image: AssetImage('assets/QQ.jpg'),
+                      image: AssetImage('assets/animal.png'),
                       fit: BoxFit.cover,
                     ),
                   ),
@@ -189,9 +193,9 @@ class pp extends State<MyMainSite> {
                 DecoratedBox(
                   decoration: BoxDecoration(
                     shape: BoxShape.circle,
-                    color: Colors.blue,
+                    color: Colors.white,
                     image: DecorationImage(
-                      image: AssetImage('assets/QQ.jpg'),
+                      image: AssetImage('assets/cleanup.png'),
                       fit: BoxFit.cover,
                     ),
                   ),
@@ -211,28 +215,31 @@ class pp extends State<MyMainSite> {
                 Container(
                   width: 71,
                   child: Text(
-                    "Lorem",
+                    "Marine",
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                ),
+                Container(
+                  width: 71,
+                  child: Text(
+                    "Forest",
                     textAlign: TextAlign.center,
                   ),
                 ),
                 Container(
                   width: 71,
                   child: Text(
-                    "Lorem",
+                    "Animal",
                     textAlign: TextAlign.center,
                   ),
                 ),
                 Container(
                   width: 71,
                   child: Text(
-                    "Lorem",
-                    textAlign: TextAlign.center,
-                  ),
-                ),
-                Container(
-                  width: 71,
-                  child: Text(
-                    "Lorem",
+                    "Cleanup",
                     textAlign: TextAlign.center,
                   ),
                 ),
@@ -246,11 +253,9 @@ class pp extends State<MyMainSite> {
                   SizedBox(
                     height: MediaQuery.of(context).size.height * 0.05,
                   ),
-                  box(marginSize),
-                  box(marginSize),
-                  box(marginSize),
-                  box(marginSize),
-                  box(marginSize),
+                  box1(marginSize),
+                  box2(marginSize),
+                  box3(marginSize),
                 ],
                 //
               ),
@@ -263,9 +268,9 @@ class pp extends State<MyMainSite> {
     );
   }
 
-  Widget box(x) => Container(
+  Widget box1(x) => Container(
         alignment: Alignment.centerLeft,
-        margin: EdgeInsets.only(top: 2, left: 20),
+        margin: EdgeInsets.only(top: 2, left: 10),
         child: SingleChildScrollView(
           child: Column(
             children: <Widget>[
@@ -280,22 +285,24 @@ class pp extends State<MyMainSite> {
                       height: 125,
                       decoration: BoxDecoration(
                         color: Colors.grey[300],
+                        image: DecorationImage(
+                            image: AssetImage('assets/box1.png')),
                         borderRadius: BorderRadius.circular(31),
                       ),
                     ),
                     Container(
-                      margin: EdgeInsets.only(left: 50),
+                      margin: EdgeInsets.only(left: 30),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: <Widget>[
                           Container(
                             margin: EdgeInsets.only(left: 0),
                             child: Text(
-                              'ชื่องาน',
+                              'MARINE CONSERVATION',
                               style: TextStyle(
                                 fontFamily: 'NotoSans',
                                 fontWeight: FontWeight.w700,
-                                fontSize: 20,
+                                fontSize: 15,
                                 color: Color.fromRGBO(7, 89, 133, 1),
                               ),
                               textAlign: TextAlign.center,
@@ -304,17 +311,17 @@ class pp extends State<MyMainSite> {
                           Container(
                             margin: EdgeInsets.only(right: 10),
                             child: Text(
-                              'คำอธิบายงานคำอธิบายงานคำอธ\nคำอธิบายงานคำอธิบายงานคำอธ\nคำอธิบายงานคำอธิบายงานคำอธ',
+                              'take part in a marine conservation\nprogramme aimed at providing a greater\nnderstanding of marine conservation,\ninteractions and relationships between\nmarine species.',
                               style: TextStyle(
                                 fontFamily: 'NotoSans',
-                                fontSize: 14,
+                                fontSize: 10,
                               ),
                             ),
                           ),
                           Container(
                             margin: EdgeInsets.only(left: 0),
                             child: Text(
-                              'Location + จำนวนคน',
+                              '1-4 weeks, snall group',
                               style: TextStyle(
                                 fontFamily: 'NotoSans',
                                 fontSize: 11,
@@ -333,6 +340,150 @@ class pp extends State<MyMainSite> {
         ),
       );
 }
+
+Widget box2(x) => Container(
+      alignment: Alignment.centerLeft,
+      margin: EdgeInsets.only(top: 2, left: 10),
+      child: SingleChildScrollView(
+        child: Column(
+          children: <Widget>[
+            Container(
+              padding: EdgeInsets.only(bottom: 17),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Container(
+                    padding: EdgeInsets.only(top: 15),
+                    width: 125,
+                    height: 125,
+                    decoration: BoxDecoration(
+                      color: Colors.grey[300],
+                      image:
+                          DecorationImage(image: AssetImage('assets/box2.png')),
+                      borderRadius: BorderRadius.circular(31),
+                    ),
+                  ),
+                  Container(
+                    margin: EdgeInsets.only(left: 30),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: <Widget>[
+                        Container(
+                          margin: EdgeInsets.only(left: 0),
+                          child: Text(
+                            'MARINE CONSERVATION',
+                            style: TextStyle(
+                              fontFamily: 'NotoSans',
+                              fontWeight: FontWeight.w700,
+                              fontSize: 15,
+                              color: Color.fromRGBO(7, 89, 133, 1),
+                            ),
+                            textAlign: TextAlign.center,
+                          ),
+                        ),
+                        Container(
+                          margin: EdgeInsets.only(right: 10),
+                          child: Text(
+                            'take part in a marine conservation\nprogramme aimed at providing a greater\nnderstanding of marine conservation,\ninteractions and relationships between\nmarine species.',
+                            style: TextStyle(
+                              fontFamily: 'NotoSans',
+                              fontSize: 10,
+                            ),
+                          ),
+                        ),
+                        Container(
+                          margin: EdgeInsets.only(left: 0),
+                          child: Text(
+                            '1-4 weeks, snall group',
+                            style: TextStyle(
+                              fontFamily: 'NotoSans',
+                              fontSize: 11,
+                              fontWeight: FontWeight.w400,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+
+Widget box3(x) => Container(
+      alignment: Alignment.centerLeft,
+      margin: EdgeInsets.only(top: 2, left: 10),
+      child: SingleChildScrollView(
+        child: Column(
+          children: <Widget>[
+            Container(
+              padding: EdgeInsets.only(bottom: 17),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Container(
+                    padding: EdgeInsets.only(top: 15),
+                    width: 125,
+                    height: 125,
+                    decoration: BoxDecoration(
+                      color: Colors.grey[300],
+                      image:
+                          DecorationImage(image: AssetImage('assets/box3.png')),
+                      borderRadius: BorderRadius.circular(31),
+                    ),
+                  ),
+                  Container(
+                    margin: EdgeInsets.only(left: 30),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: <Widget>[
+                        Container(
+                          margin: EdgeInsets.only(left: 0),
+                          child: Text(
+                            'MARINE CONSERVATION',
+                            style: TextStyle(
+                              fontFamily: 'NotoSans',
+                              fontWeight: FontWeight.w700,
+                              fontSize: 15,
+                              color: Color.fromRGBO(7, 89, 133, 1),
+                            ),
+                            textAlign: TextAlign.center,
+                          ),
+                        ),
+                        Container(
+                          margin: EdgeInsets.only(right: 10),
+                          child: Text(
+                            'take part in a marine conservation\nprogramme aimed at providing a greater\nnderstanding of marine conservation,\ninteractions and relationships between\nmarine species.',
+                            style: TextStyle(
+                              fontFamily: 'NotoSans',
+                              fontSize: 10,
+                            ),
+                          ),
+                        ),
+                        Container(
+                          margin: EdgeInsets.only(left: 0),
+                          child: Text(
+                            '1-4 weeks, snall group',
+                            style: TextStyle(
+                              fontFamily: 'NotoSans',
+                              fontSize: 11,
+                              fontWeight: FontWeight.w400,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
 
 class BottomBox extends StatelessWidget {
   @override

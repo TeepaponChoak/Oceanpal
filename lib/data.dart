@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'status.dart';
 import 'home.dart';
+import 'package:readmore/readmore.dart';
 
 class Datapage extends StatefulWidget {
   @override
@@ -8,6 +9,8 @@ class Datapage extends StatefulWidget {
 }
 
 class Data extends State<Datapage> {
+  bool isReadMore = false;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,6 +25,10 @@ class Data extends State<Datapage> {
                     height: MediaQuery.of(context).size.height * 0.3,
                     decoration: BoxDecoration(
                       color: Colors.grey[300],
+                      image: DecorationImage(
+                        image: AssetImage('assets/dataim2.png'),
+                        fit: BoxFit.cover,
+                      ),
                     ),
                   ),
                   Container(
@@ -97,13 +104,9 @@ class Data extends State<Datapage> {
                         margin: EdgeInsets.only(top: 10, left: 30),
                         child: Row(children: <Widget>[
                           Container(
-                            width: 25,
-                            child: Image(image: AssetImage('assets/loc.png')),
-                          ),
-                          Container(
-                            margin: EdgeInsets.only(left: 15),
+                            margin: EdgeInsets.only(left: 0),
                             child: Text(
-                              'Chonburi, Thailand',
+                              'Koh Tao, Thailand',
                               style: TextStyle(
                                 fontFamily: 'Raleway',
                                 fontSize: 20,
@@ -115,16 +118,20 @@ class Data extends State<Datapage> {
                         ]),
                       ),
                       Container(
-                        margin: EdgeInsets.only(top: 15, left: 36),
-                        alignment: Alignment.centerLeft,
-                        child: Text(
-                          'lorem ipsum lorem ipsum lorem ipsum\nlorem ipsum lorem ipsum lorem ipsum\nlorem ipsum lorem ipsum lorem ipsum\nlorem ipsum lorem ipsum lorem ipsum\nlorem ipsum lorem ipsum lorem ipsum\nlorem ipsum lorem ipsum lorem ipsum\nlorem ipsum lorem ipsum lorem ipsum\nlorem ipsum lorem ipsum lorem ipsum\nlorem ipsum lorem ipsum lorem ipsum\nlorem ipsum lorem ipsum lorem ipsum\nlorem ipsum lorem ipsum lorem ipsum\nlorem ipsum lorem ipsum lorem ipsum\nlorem ipsum lorem ipsum lorem ipsum\nlorem ipsum lorem ipsum lorem ipsum\nlorem ipsum lorem ipsum lorem ipsum\n',
-                          style: TextStyle(
-                            fontFamily: 'Raleway',
-                            fontSize: 19,
-                            fontWeight: FontWeight.w600,
+                        child: Column(children: <Widget>[
+                          Container(
+                            margin: EdgeInsets.only(top: 15, left: 35),
+                            alignment: Alignment.centerLeft,
+                            child: Text(
+                              'Coral Reefs cover less than 2% of the\nocean floor but support 25% of all marine\nlife. They are the most biologically\ndiverse ecosystems on earth, but also\none of the most threatened. The Marine\nConservation project in Thailand aims to\naddress this through a foundation of\nresearch, education and local restoration\nand protection measures.\n\nThe programme is structured over 4\nweeks which you can join for 1 week or\nmore as well as any additional time for\ndive courses you may need (see Dive\nCourses section below). The longer you\nare able to stay, the\nmore diverse the range of conservation topics and\ninitiatives you will be able to get involved\nin.\n',
+                              style: TextStyle(
+                                fontFamily: 'Raleway',
+                                fontSize: 19,
+                                fontWeight: FontWeight.w500,
+                              ),
+                            ),
                           ),
-                        ),
+                        ]),
                       ),
                       Container(
                         margin: EdgeInsets.only(left: 30),
@@ -153,7 +160,7 @@ class Data extends State<Datapage> {
                                 Container(
                                   margin: EdgeInsets.only(top: 20),
                                   child: Text(
-                                    'Somethings....',
+                                    'Minimum Age: 18 years old',
                                     style: TextStyle(
                                       fontSize: 20,
                                       fontFamily: 'Raleway',
@@ -175,7 +182,7 @@ class Data extends State<Datapage> {
                                 Container(
                                   margin: EdgeInsets.only(top: 20),
                                   child: Text(
-                                    'Somethings....',
+                                    'Must know how to swim',
                                     style: TextStyle(
                                       fontSize: 20,
                                       fontFamily: 'Raleway',
@@ -197,7 +204,7 @@ class Data extends State<Datapage> {
                                 Container(
                                   margin: EdgeInsets.only(top: 20),
                                   child: Text(
-                                    'Somethings....',
+                                    'You need to speak English',
                                     style: TextStyle(
                                       fontSize: 20,
                                       fontFamily: 'Raleway',
@@ -219,7 +226,7 @@ class Data extends State<Datapage> {
                                 Container(
                                   margin: EdgeInsets.only(top: 20),
                                   child: Text(
-                                    'Somethings....',
+                                    'Proof to travel Insurance docs',
                                     style: TextStyle(
                                       fontSize: 20,
                                       fontFamily: 'Raleway',
@@ -264,7 +271,7 @@ class Data extends State<Datapage> {
                               Container(
                                 margin: EdgeInsets.only(top: 30, left: 30),
                                 child: Text(
-                                  'Lorem ipsum',
+                                  'Developing new skills',
                                   style: TextStyle(
                                     fontSize: 20,
                                     fontFamily: 'Raleway',
@@ -292,7 +299,7 @@ class Data extends State<Datapage> {
                               Container(
                                 margin: EdgeInsets.only(top: 30, left: 30),
                                 child: Text(
-                                  'Lorem ipsum',
+                                  'Spending time in nature',
                                   style: TextStyle(
                                     fontSize: 20,
                                     fontFamily: 'Raleway',
@@ -320,7 +327,7 @@ class Data extends State<Datapage> {
                               Container(
                                 margin: EdgeInsets.only(top: 30, left: 30),
                                 child: Text(
-                                  'Lorem ipsum',
+                                  'Explore the underwater world',
                                   style: TextStyle(
                                     fontSize: 20,
                                     fontFamily: 'Raleway',
@@ -353,6 +360,10 @@ class Data extends State<Datapage> {
                               width: MediaQuery.of(context).size.width * 0.8,
                               decoration: BoxDecoration(
                                 color: Colors.grey[300],
+                                image: DecorationImage(
+                                  image: AssetImage('assets/dataim.png'),
+                                  fit: BoxFit.cover,
+                                ),
                                 borderRadius: BorderRadius.circular(31),
                               ),
                             ),
@@ -378,6 +389,82 @@ class Data extends State<Datapage> {
                           ],
                         ),
                       ),
+                      Container(
+                        margin: EdgeInsets.only(left: 40, top: 25, right: 41),
+                        child: Column(children: <Widget>[
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: <Widget>[
+                              Stack(
+                                children: <Widget>[
+                                  Container(
+                                    width: 160,
+                                    height: 45,
+                                    decoration: BoxDecoration(
+                                      color: Color.fromRGBO(16, 202, 150, 1),
+                                      borderRadius: BorderRadius.circular(10),
+                                      boxShadow: [
+                                        BoxShadow(
+                                          color: Colors.grey.withOpacity(0.5),
+                                          spreadRadius: 1,
+                                          blurRadius: 5,
+                                          offset: Offset(0, 3),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                  Container(
+                                    margin: EdgeInsets.only(left: 25, top: 9),
+                                    alignment: Alignment.center,
+                                    child: Text(
+                                      'Apply Now',
+                                      style: TextStyle(
+                                        fontFamily: 'Raleway',
+                                        fontSize: 20,
+                                        fontWeight: FontWeight.w700,
+                                        color: Colors.white,
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                              Stack(
+                                children: <Widget>[
+                                  Container(
+                                    width: 160,
+                                    height: 45,
+                                    decoration: BoxDecoration(
+                                      color: Color.fromRGBO(232, 194, 95, 1),
+                                      borderRadius: BorderRadius.circular(10),
+                                      boxShadow: [
+                                        BoxShadow(
+                                          color: Colors.grey.withOpacity(0.5),
+                                          spreadRadius: 1,
+                                          blurRadius: 5,
+                                          offset: Offset(0, 3),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                  Container(
+                                    margin: EdgeInsets.only(left: 20, top: 10),
+                                    alignment: Alignment.center,
+                                    child: Text(
+                                      'Contact Host',
+                                      style: TextStyle(
+                                        fontFamily: 'Raleway',
+                                        fontSize: 20,
+                                        fontWeight: FontWeight.w700,
+                                        color: Colors.white,
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ],
+                          ),
+                        ]),
+                      ),
                       SizedBox(
                         height: 50,
                       ),
@@ -391,4 +478,13 @@ class Data extends State<Datapage> {
       ),
     );
   }
+}
+
+Widget readMore(String text) {
+  return ReadMoreText(
+    text,
+    style: TextStyle(
+      fontSize: 20,
+    ),
+  );
 }
