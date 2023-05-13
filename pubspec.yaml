@@ -73,6 +73,9 @@ flutter:
     - assets/moonphase.png
     - assets/cloudy.png
     - assets/map.jpg
+    - assets/back.png
+    - assets/black_star.png
+    - assets/share.png
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

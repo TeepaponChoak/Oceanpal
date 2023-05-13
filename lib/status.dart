@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:oceanpal/data.dart';
 import 'package:oceanpal/main.dart';
 import 'home.dart';
+import 'data.dart';
 
 class StatusPage extends StatefulWidget {
   @override
@@ -97,18 +99,26 @@ class Status extends State<StatusPage> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-                Container(
-                  margin: EdgeInsets.only(top: 20),
-                  //width: 350,
-                  //height: 300,
-                  width: MediaQuery.of(context).size.width * 0.8,
-                  height: MediaQuery.of(context).size.height * 0.35,
-                  decoration: BoxDecoration(
-                    color: Colors.grey[300],
-                    borderRadius: BorderRadius.circular(31),
-                    image: DecorationImage(
-                      image: AssetImage('assets/map.jpg'),
-                      fit: BoxFit.cover,
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => Datapage()),
+                    );
+                  },
+                  child: Container(
+                    margin: EdgeInsets.only(top: 20),
+                    //width: 350,
+                    //height: 300,
+                    width: MediaQuery.of(context).size.width * 0.8,
+                    height: MediaQuery.of(context).size.height * 0.35,
+                    decoration: BoxDecoration(
+                      color: Colors.grey[300],
+                      borderRadius: BorderRadius.circular(31),
+                      image: DecorationImage(
+                        image: AssetImage('assets/map.jpg'),
+                        fit: BoxFit.cover,
+                      ),
                     ),
                   ),
                 ),
