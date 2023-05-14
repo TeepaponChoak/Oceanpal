@@ -29,8 +29,7 @@ class Status extends State<StatusPage> {
                     );
                   },
                   child: Container(
-                    width: 29,
-                    height: 29,
+                    width: 40,
                     margin: EdgeInsets.only(
                       top: 40,
                       left: 30,
@@ -38,7 +37,7 @@ class Status extends State<StatusPage> {
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(8),
                       image: DecorationImage(
-                        image: AssetImage('assets/menu.png'),
+                        image: AssetImage('assets/back.png'),
                         fit: BoxFit.cover,
                       ),
                     ),
@@ -130,12 +129,7 @@ class Status extends State<StatusPage> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 GestureDetector(
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => Datapage()),
-                    );
-                  },
+                  onTap: () {},
                   child: Container(
                     margin: EdgeInsets.only(top: 20),
                     //width: 350,

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:oceanpal/main.dart';
 import 'status.dart';
 import 'home.dart';
 import 'package:readmore/readmore.dart';
@@ -41,7 +42,7 @@ class Data extends State<Datapage> {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => StatusPage()),
+                                  builder: (context) => MyMainSite()),
                             );
                           },
                           child: Container(

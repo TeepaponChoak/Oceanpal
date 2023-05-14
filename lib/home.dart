@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'main.dart';
 import 'status.dart';
 import 'package:convex_bottom_bar/convex_bottom_bar.dart';
+import 'data.dart';
 
 class Mainpage extends StatelessWidget {
   @override
@@ -253,7 +254,15 @@ class pp extends State<MyMainSite> {
                   SizedBox(
                     height: MediaQuery.of(context).size.height * 0.05,
                   ),
-                  box1(marginSize),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => Datapage()),
+                      );
+                    },
+                    child: box1(marginSize),
+                  ),
                   box2(marginSize),
                   box3(marginSize),
                 ],
